@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3e82097d.css",
+    "main.js": "/static/js/main.e7a2f9fc.js",
+    "static/js/174.b99220b7.chunk.js": "/static/js/174.b99220b7.chunk.js",
+    "static/js/81.78781d71.chunk.js": "/static/js/81.78781d71.chunk.js",
+    "static/js/251.476e70e1.chunk.js": "/static/js/251.476e70e1.chunk.js",
+    "static/js/577.3eab5dc7.chunk.js": "/static/js/577.3eab5dc7.chunk.js",
+    "static/js/938.66914b63.chunk.js": "/static/js/938.66914b63.chunk.js",
+    "static/js/893.371cf423.chunk.js": "/static/js/893.371cf423.chunk.js",
+    "static/js/546.cdfbe297.chunk.js": "/static/js/546.cdfbe297.chunk.js",
+    "static/js/734.ff5fad7f.chunk.js": "/static/js/734.ff5fad7f.chunk.js",
+    "static/js/602.fad4b77c.chunk.js": "/static/js/602.fad4b77c.chunk.js",
+    "static/js/213.65748c61.chunk.js": "/static/js/213.65748c61.chunk.js",
+    "static/js/83.58082541.chunk.js": "/static/js/83.58082541.chunk.js",
+    "static/js/651.622d443a.chunk.js": "/static/js/651.622d443a.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/index.html",
+    "main.3e82097d.css.map": "/static/css/main.3e82097d.css.map",
+    "main.e7a2f9fc.js.map": "/static/js/main.e7a2f9fc.js.map",
+    "174.b99220b7.chunk.js.map": "/static/js/174.b99220b7.chunk.js.map",
+    "81.78781d71.chunk.js.map": "/static/js/81.78781d71.chunk.js.map",
+    "251.476e70e1.chunk.js.map": "/static/js/251.476e70e1.chunk.js.map",
+    "577.3eab5dc7.chunk.js.map": "/static/js/577.3eab5dc7.chunk.js.map",
+    "938.66914b63.chunk.js.map": "/static/js/938.66914b63.chunk.js.map",
+    "893.371cf423.chunk.js.map": "/static/js/893.371cf423.chunk.js.map",
+    "546.cdfbe297.chunk.js.map": "/static/js/546.cdfbe297.chunk.js.map",
+    "734.ff5fad7f.chunk.js.map": "/static/js/734.ff5fad7f.chunk.js.map",
+    "602.fad4b77c.chunk.js.map": "/static/js/602.fad4b77c.chunk.js.map",
+    "213.65748c61.chunk.js.map": "/static/js/213.65748c61.chunk.js.map",
+    "83.58082541.chunk.js.map": "/static/js/83.58082541.chunk.js.map",
+    "651.622d443a.chunk.js.map": "/static/js/651.622d443a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e82097d.css",
+    "static/js/main.e7a2f9fc.js"
+  ]
+}
