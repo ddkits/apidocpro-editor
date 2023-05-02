@@ -1,0 +1,137 @@
+#rtjs-editor{
+    display: block !important;
+    position: relative !important;
+    height: 80vh !important;
+    max-height: 80vh !important;
+    min-height: 80vh !important;
+}
+#editors{
+    display: block;
+    position: relative;
+    height: 80vh !important;
+    max-height: 80vh !important;
+}
+#preview, #code-editor{
+    overflow: auto;
+    height: 80vh;
+    min-height: 80vh;
+    background-color: #ffffff90;
+    background: #ffffff90;
+    max-height: 100% !important;
+    max-width: fit-content;
+}
+#document{
+    height: max-content;
+}
+#apieditor{
+    display: flex;
+    height: 70vh !important;
+}
+
+.footer-outer{
+    display: none;
+}
+
+iframe{
+    display: block;
+    position: relative;
+    height: 100% !important;
+    overflow: auto;
+    max-width: fit-content;
+    min-height: 100% !important;
+    max-height: 100% !important;
+}
+/* CSS */
+body .navbar, .nav-link {
+    background:  #007bff !important;
+    background-color: #007bff !important;
+    margin: 0 !important;
+    padding: 10px;
+    color: white !important;
+}
+body #toolbar, .editor-screen{
+    background:  #007bff20 !important;
+    background-color: #007bff20 !important;
+    margin: 0 !important;
+    padding: 10px;
+    color: #007bff !important;
+}
+body #toolbar form{
+    width: auto !important;
+    max-width: auto !important;
+}
+.button-30,#toolbar .btn-function, body #toolbar select, body #toolbar button, body #toolbar a{
+    align-items: center;
+    appearance: none;
+    background:  #007bff80;
+    background-color: #007bff80;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 16px;
+  }
+  body #toolbar label{
+    align-items: center;
+    appearance: none;
+    background:  #ffffff80;
+    background-color: #ffffff80;
+    border-radius: 4px;
+    border-width: 0;
+    box-sizing: border-box;
+    color: #007bff;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 16px;
+  }
+  .button-30:focus, select:focus, #toolbar .btn-function:focus {
+    box-shadow: #D6D6E7 1.5px 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+
+  .button-30:hover, #toolbar .btn-function:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+
+  .button-30.active, #toolbar .btn-function.active {
+    background: #D6D6E7;
+    background-color: #D6D6E7;
+    color: #007bff;
+    transform: translateY(2px);
+  }

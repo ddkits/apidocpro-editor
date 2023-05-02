@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+  <title>API Documentation Pro Editor | free online AsyncAPI OpenAPI editor</title>
+  <meta name="title" content="API Documentation Pro Editor">
+  <meta name="description"
+    content="All your API Documentation in one place. ApiDocPro is a Commonplace and used extensively by companies when describing an application in documentation., free online AsyncAPI OpenAPI editor">
+  <meta name="keywords"
+    content="API, Documentation, Pro, apidocpro, docpro, doc, editor, secure, private, openapi, swagger, redoc, asyncapi,  automation, apidocpro, APIs, free, editor, online, free online AsyncAPI OpenAPI editor">
+  <meta name="author" content="ApiDocPro.com">
+  <link rel="canonical" href="https://editor.apidocpro.com">
+  <meta name="robots" content="all, index, follow">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="API Documentation Pro Editor | free online AsyncAPI OpenAPI editor">
+  <meta property="og:image" content="https://apidocpro.com/img/dev-doc.png">
+  <meta property="og:url" content="https://apidocpro.com/editor">
+  <meta property="og:sitename" content="API Documentation Pro Editor">
+  <meta property="og:description"
+    content="All your API Documentation in one place. ApiDocPro is a Commonplace and used extensively by companies when describing an application in documentation., free online AsyncAPI OpenAPI editor">
+  <meta name="twitter:title" content="API Documentation Pro Editor | free online AsyncAPI OpenAPI editor">
+  <meta name="twitter:image" content="https://apidocpro.com/img/dev-doc.png">
+  <meta name="twitter:url" content="https://apidocpro.com/editor">
+  <meta name="twitter:card" content="ApiDocPro, free online AsyncAPI OpenAPI editor">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Mawajez News Hub" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+</head>
+  <body>
+    <div id="rsg-root"></div>
+    <script src="build/bundle.8d36eebe.js"></script>
+  </body>
+</html>

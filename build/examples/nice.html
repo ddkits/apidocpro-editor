@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>My first styled page</title>
+</head>
+
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+    <li><a href="#">Home page</a>
+    <li><a href="#">Musings</a>
+    <li><a href="#">My town</a>
+    <li><a href="#">Links</a>
+  </ul>
+
+<!-- Main content -->
+<p>Canvas pane goes here:</p>
+	<canvas id="pane" width="300" height="200"></canvas>
+	<script>
+		var canvas = document.getElementById('pane');
+		var context = canvas.getContext('2d');
+
+		context.fillStyle = 'rgb(250,0,0)';
+		context.fillRect(10, 10, 55, 50);
+
+		context.fillStyle = 'rgba(0, 0, 250, 0.5)';
+		context.fillRect(30, 30, 55, 50);
+	</script>
+
+</body>
+</html>
