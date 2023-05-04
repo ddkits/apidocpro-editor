@@ -1,6 +1,6 @@
 {
   "name": "apidocpro-editor",
-  "version": "1.0.01",
+  "version": "1.0.02",
   "description": "All your API Documentation in one place. ApiDocPro is a Commonplace and used extensively by companies when describing an application in documentation., free online AsyncAPI OpenAPI editor",
   "author": "Sam Ayoub",
   "url": "https://apidocpro.com",
@@ -99,7 +99,7 @@
     "js-yaml": "^4",
     "laravel-echo": "^1.14.1",
     "mobx": "^6.6.2",
-    "openapi-asyncapi-ui-render": "^1.0.14",
+    "openapi-asyncapi-ui-render": "^1.0.18",
     "particles-bg": "^2.5.5",
     "polyfills": "^2",
     "prop-types": "^15",

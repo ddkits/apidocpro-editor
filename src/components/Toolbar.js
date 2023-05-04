@@ -270,6 +270,12 @@ export default function Toolbar(props) {
             )}
           </button>
         </div>
+        <div className="col d-flex">
+          <button className="btn" onClick={() => props?.setGetContent()}>
+            Yaml To Json
+          </button>
+        </div>
+
         {/* <button className=" margin-right btn btn-function" onClick={postman} id="postman" style={{ }}>Convert to Postman Collection</button>
     <div id="embed-code" className="embed-code border bg-gray p-2 m-2" style={{ }}>Must run the code to see the embed iframe here.</div>
     <div id="share-now" className="embed-code border bg-gray p-2 m-2" style={{ }}>Must run the code to see the embed iframe here.</div> */}

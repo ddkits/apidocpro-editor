@@ -24,7 +24,7 @@ import { tags as t } from '@lezer/highlight';
 import AsyncApiComponent from '@asyncapi/react-component/browser';
 import '@asyncapi/react-component/styles/default.min.css';
 import './themes/3.x/theme-outline.css';
-import { ApiDocPro } from 'openapi-asyncapi-ui-render/dist/components';
+import { ApiDocPro, yamlToJson } from 'openapi-asyncapi-ui-render';
 import * as THEME from 'openapi-asyncapi-ui-render/dist/components/theme/green/green';
 import ReactMarkdown from 'react-markdown';
 
@@ -70,8 +70,8 @@ export default function Editor(props) {
   const codeEditorRef = useRef();
   // const stateFields = { history: historyField };
   const [extensions, setextensions] = useState([apiDocTheme]);
-  const [get, setget] = useState('');
-  const [getOpenApi, setgetOpenApi] = useState(false);
+  const [get, setGet] = useState('');
+  const [getOpenApi, setGetOpenApi] = useState(false);
   const [swaggerparser, setswaggerparser] = useState(false);
   const activeNow = props.activenow || 0;
   const tabName = props.codename;
@@ -86,7 +86,7 @@ export default function Editor(props) {
     // custom api set
     if (e === 'OpenAPI JSON Specification') {
       setAPI('openapi');
-      setgetOpenApiCallback(true);
+      setGetOpenApiCallback(true);
       setextensions([
         apiDocTheme,
         loadLanguage('json'),
@@ -95,7 +95,7 @@ export default function Editor(props) {
       setLanguage('json');
       localStorage.setItem(`editorapidocpro-${activeNow}-language`, 'json');
     } else if (e === 'OpenAPI YAML Specification') {
-      setgetOpenApiCallback(true);
+      setGetOpenApiCallback(true);
       setAPI('openapi');
       setextensions([
         apiDocTheme,
@@ -105,7 +105,7 @@ export default function Editor(props) {
       setLanguage('yaml');
       localStorage.setItem(`editorapidocpro-${activeNow}-language`, 'yaml');
     } else if (e === 'AsyncAPI JSON Specification') {
-      setgetOpenApiCallback(true);
+      setGetOpenApiCallback(true);
       setAPI('async');
       setextensions([
         apiDocTheme,
@@ -115,7 +115,7 @@ export default function Editor(props) {
       setLanguage('json');
       localStorage.setItem(`editorapidocpro-${activeNow}-language`, 'json');
     } else if (e === 'AsyncAPI YAML Specification') {
-      setgetOpenApiCallback(true);
+      setGetOpenApiCallback(true);
       setAPI('async');
       setextensions([
         apiDocTheme,
@@ -144,14 +144,14 @@ export default function Editor(props) {
   useEffect(() => {
     // fetchFile(language)
     setmounted(true);
-    setgetOpenApi(localStorage.getItem('getOpenapi') || false);
+    setGetOpenApi(localStorage.getItem('getOpenapi') || false);
     //   Change language
     localStorage.getItem(tabName + '-language')
       ? setLanguage(localStorage.getItem(`editorapidocpro-${activeNow}-language`))
       : localStorage.setItem(`editorapidocpro-${activeNow}-language`, language);
     localStorage.getItem(`editorapidocpro-${activeNow}`)
-      ? setget(JSON.parse(localStorage.getItem(`editorapidocpro-${activeNow}`)))
-      : setget('{\n\n}');
+      ? setGet(JSON.parse(localStorage.getItem(`editorapidocpro-${activeNow}`)))
+      : setGet('{\n\n}');
     // localStorage.getItem(`editorapidocpro-theme`) ? settheme(JSON.parse(localStorage.getItem(`editorapidocpro-theme`))): settheme(apiDocTheme);
     setLoading(false);
     // console.clear();
@@ -183,7 +183,7 @@ export default function Editor(props) {
         .then((r) => r.text())
         .then((x) => {
           localStorage.setItem(tabName, JSON.stringify(x));
-          setget(x);
+          setGet(x);
         });
     }
     return;
@@ -237,12 +237,18 @@ export default function Editor(props) {
   }, []);
 
   const onChange = useCallback((value) => {
-    setget(value);
+    setGet(value);
     localStorage.setItem(tabName, JSON.stringify(value));
   });
-  const setgetOpenApiCallback = (e) => {
-    setgetOpenApi(e);
+  const setGetOpenApiCallback = (e) => {
+    setGetOpenApi(e);
     localStorage.setItem('getOpenApi', e);
+  };
+  const setGetContent = (e) => {
+    setGetOpenApi(e);
+    const vlue = JSON.stringify(yamlToJson(get), null, 2);
+    setGet(vlue);
+    localStorage.setItem(tabName, JSON.stringify(vlue));
   };
 
   const html = `
@@ -266,6 +272,7 @@ export default function Editor(props) {
         <Toolbar
           key={`editorapidocpro-${activeNow}-${language}`}
           activenow={activeNow}
+          setGetContent={setGetContent}
           languageCallback={languageCallback}
           templateNowCallback={templateNowCallback}
           // themeCallback={themeCallback}
@@ -277,7 +284,7 @@ export default function Editor(props) {
           swaggerparser={(e) => {
             setswaggerparser(e);
           }}
-          apidocproCallback={(e) => setgetOpenApiCallback(e)}
+          apidocproCallback={(e) => setGetOpenApiCallback(e)}
           apidocproui={getOpenApi}
         />
         <section className="row" id="apieditor">
@@ -343,14 +350,16 @@ export default function Editor(props) {
             {!loading ? (
               getOpenApi ? (
                 language === 'yaml' || language === 'json' ? (
-                  <ApiDocPro
-                    title="APIDocPro OpenAPI/AysncAPI UI"
-                    rightregion={true} // Bool default true
-                    leftregion={false} // Bool default true
-                    header={false} // Bool default true
-                    theme={THEME}
-                    spec={get} // string
-                  />
+                  <>
+                    <ApiDocPro
+                      title="APIDocPro OpenAPI/AysncAPI UI"
+                      rightregion={true} // Bool default true
+                      leftregion={false} // Bool default true
+                      header={false} // Bool default true
+                      theme={THEME}
+                      spec={typeof get === 'object' ? get : yamlToJson(get)} // string
+                    />
+                  </>
                 ) : (
                   <iframe
                     key={tabName.toString() + language.toString()}
